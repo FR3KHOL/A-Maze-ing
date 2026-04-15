@@ -11,7 +11,7 @@ def run_app() -> None:
     is_solved = False
 
     themes = [
-        (" 🟢", " 🔴", " ● ", "█", Palette.W.value),
+        (" 🟢", " 🔴", "🔹", "█", Palette.W.value),
         (" 🐁", " 🧀", " 🐾", "*", Palette.Y.value),
         (" 🤠", " 💰", " 👣", "▀", Palette.BR.value),
         (" 🚀", " 🌍", " ✨", "@", Palette.B.value),
