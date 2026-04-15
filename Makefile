@@ -1,4 +1,4 @@
-PACKAGE  = a_maze_ing
+PACKAGE  = mazegen
 NAME     = a_maze_ing.py
 PYTHON   = python3
 PIP      = pip

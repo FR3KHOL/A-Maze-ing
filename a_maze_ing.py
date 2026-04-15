@@ -1,8 +1,11 @@
+"""Entry point for the A-Maze-Ing generator application."""
 import sys
-from a_maze_ing.maze import MazeCore
-from a_maze_ing.components import Palette
+from mazegen.maze import MazeCore
+from mazegen.components import Palette
+
 
 def run_app() -> None:
+    """Initialize and run the interactive terminal application."""
     src_file = sys.argv[1] if len(sys.argv) > 1 else 'config.txt'
     show_anim = False
     is_solved = False
@@ -28,23 +31,33 @@ def run_app() -> None:
 
     while True:
         c_start, c_end, c_path, c_wall, c_color = themes[theme_idx]
-        app.draw(clr=c_color, char_wall=c_wall, show_sol=is_solved, sol_char=c_path, start_char=c_start, end_char=c_end)
-        
-        print(f"\n{Palette.W.value}=== Maze Gen (Current Seed: {app.seed_val}) ===")
+        app.draw(
+            clr=c_color,
+            char_wall=c_wall,
+            show_sol=is_solved,
+            sol_char=c_path,
+            start_char=c_start,
+            end_char=c_end
+        )
+
+        print(
+            f"\n{Palette.W.value}=== Maze Gen "
+            f"(Current Seed: {app.seed_val}) ==="
+        )
         print("1. New Maze")
         print("2. Toggle Solution")
-        print("3. Swap Theme")
+        print("3. Swap Theme (Style, Emojis & Color)")
         print(f"4. Toggle Anim ({'ON' if show_anim else 'OFF'})")
         print("5. Export Hex File")
         print("0. Exit")
-        
+
         try:
             cmd = input("\nSelect [0-5]: ").strip()
             match cmd:
                 case '1':
                     app = MazeCore(src_file, show_anim)
                     app.build_maze()
-                    is_solved = False 
+                    is_solved = False
                 case '2':
                     is_solved = not is_solved
                 case '3':
@@ -62,6 +75,7 @@ def run_app() -> None:
                     pass
         except KeyboardInterrupt:
             break
+
 
 if __name__ == "__main__":
     run_app()

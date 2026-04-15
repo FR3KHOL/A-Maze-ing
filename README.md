@@ -68,13 +68,13 @@ SEED=42
 ---
 
 ## Code Reusability Requirements
-The maze generation logic is entirely encapsulated within the `a_maze_ing` module, making it highly portable. 
+The maze generation logic is entirely encapsulated within the `mazegen` module, making it highly portable. 
 
 To use the generator in another project, install the built package (`pip install mazegen-1.0.0.tar.gz`) and import `MazeCore`:
 
 ```python
-from a_maze_ing.maze import MazeCore
-from a_maze_ing.components import Palette
+from mazegen.maze import MazeCore
+from mazegen.components import Palette
 
 # Instantiate the core generator with a config file
 maze = MazeCore("config.txt", use_anim=False)
