@@ -11,14 +11,14 @@ def run_app() -> None:
     is_solved = False
 
     themes = [
-        (" 🟢", " 🔴", "🔹", "█", Palette.W.value),
-        (" 🐁", " 🧀", " 🐾", "*", Palette.Y.value),
-        (" 🤠", " 💰", " 👣", "▀", Palette.BR.value),
-        (" 🚀", " 🌍", " ✨", "@", Palette.B.value),
-        (" 🧟", " 🧠", " 🩸", "■", Palette.G.value),
-        (" 🧙", " 📜", " 🔮", "#", Palette.M.value),
-        (" 🐶", " 🦴", " 🐾", "+", Palette.C.value),
-        (" 🏎️ ", " 🏁", " 💨", "0", Palette.R.value)
+        ("🟢", "🔴", "🔹", "██", Palette.W.value),
+        ("🐁", "🧀", "🐾", "**", Palette.Y.value),
+        ("🤠", "💰", "👣", "▀▀", Palette.BR.value),
+        ("🚀", "🌍", "✨", "@@", Palette.B.value),
+        ("🧟", "🧠", "🩸", "■■", Palette.G.value),
+        ("🧙", "📜", "🔮", "##", Palette.M.value),
+        ("🐶", "🦴", "🐾", "++", Palette.C.value),
+        ("🚗", "🏁", "💨", "00", Palette.R.value)
     ]
     theme_idx = 0
 
